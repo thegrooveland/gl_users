@@ -12,7 +12,9 @@ class UsersServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    { }
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+    }
 
     /**
      * Register the application services.
